@@ -9,9 +9,6 @@
     "@sap/cds": "^6",
     "express": "^4"
   },
-  "devDependencies": {
-    "sqlite3": "^5.0.4"
-  },
   "scripts": {
     "start": "cds run"
   },
@@ -41,6 +38,19 @@
     "rules": {
       "no-console": "off",
       "require-atomic-updates": "off"
+    }
+  },
+  "devDependencies": {
+    "sqlite3": "^5.1.2"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "bookshop.db"
+        }
+      }
     }
   }
 }
