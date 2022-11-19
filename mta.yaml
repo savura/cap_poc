@@ -1,7 +1,7 @@
-_schema-version: "3.2"
+_schema-version: "3.1"
 ID: cap_poc
 description: A simple CAP project.
-version: 0.0.1
+version: 1.0.0
 modules:
 - name: cap_poc-srv
   type: nodejs
@@ -12,8 +12,6 @@ modules:
       srv-url: ${default-url}
   parameters:
     buildpack: nodejs_buildpack
-    disk-quota: 1024M
-    memory: 512M
   build-parameters:
     builder: npm-ci
 - name: cap_poc-destination-content
