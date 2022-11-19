@@ -5,7 +5,7 @@ version: 1.0.0
 modules:
 - name: cap_poc-srv
   type: nodejs
-  path: srv
+  path: gen/srv
   provides:
   - name: srv-api
     properties:
