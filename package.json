@@ -1,22 +1,23 @@
 {
   "name": "cap_poc",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
+  "version": "0.0.1",
   "repository": "<Add your repository here>",
   "license": "UNLICENSED",
-  "private": true,
+  "description": "Business Application",
+  "engines": {
+    "node": "^16"
+  },
   "dependencies": {
-    "@sap/cds": "^6",
+    "@sap/cds": "^6.1",
+    "@sap/audit-logging": "^5",
+
+    "debug": "^4.3",
     "express": "^4"
   },
   "devDependencies": {
-    "sqlite3": "^5.0.4"
   },
   "scripts": {
     "start": "cds run"
-  },
-  "engines": {
-    "node": "^16.15"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -41,6 +42,13 @@
     "rules": {
       "no-console": "off",
       "require-atomic-updates": "off"
+    }
+  },
+  "cds": {
+    "requires": {
+      "auth": {
+        "restrict_all_services": false
+      }
     }
   }
 }
